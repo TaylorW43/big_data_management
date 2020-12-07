@@ -28,11 +28,11 @@ Outliers are objects in the data that do not conform to the common behavior of t
 ./p4/input/test_p4.csv
 
 ## Reporting Outliers
-you need to write a java map-reduce job that reports the outliers based on the following requirements:
-(1) The program takes two mandatory parameters r and k. If either is missing, then report an error.
-(2) You must use a single map-reduce job (many mappers and many reducers but in a single job) to
+You need to write a java map-reduce job that reports the outliers based on the following requirements:
+* The program takes two mandatory parameters r and k. If either is missing, then report an error.
+* You must use a single map-reduce job (many mappers and many reducers but in a single job) to
 complete the task.
-Hint: Think of diving the space in small segments. Try to make the processing of each segment independent from any other segment. That is, for a specific point p, you should be able to decide whether it is outlier or not only based on the points in p’s segment.
+* Hint: Think of diving the space in small segments. Try to make the processing of each segment independent from any other segment. That is, for a specific point p, you should be able to decide whether it is outlier or not only based on the points in p’s segment.
 
 ## Reference
 [DOD paper](http://people.csail.mit.edu/lcao/papers/DOD.pdf)
