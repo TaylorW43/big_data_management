@@ -15,3 +15,7 @@ Write map-reduce job(s) that implement the K-Means clustering algorithm as given
 
 ## Input Parameters
 The Java program should accept the HDFS file location containing the initial K centroids as a parameter. This is the file, which will be broadcasted to all mappers in the 1st round. K can be any value within the range of [10...100]
+
+# Problem 4 (Distance-Based Outlier Detection Clustering)
+Outliers are objects in the data that do not conform to the common behavior of the other objects. There are many definitions for outliers. One common definition is “distance-based outliers”. In this definition (see the figure below), you are given two parameters, radius r and threshold k, and a point p is said to be outlier iff: “Within a circle around p (p is the center) of radius r, less than k neighbors are found”. And point p is said to be inlier (Not outlier) iff: “Within a circle around p (p is the center) of radius r, more than or equal to k neighbors are found”
+
