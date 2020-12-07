@@ -1,0 +1,376 @@
+Note: all these were executed in macOS terminal
+
+Question 1:
+
+//create collection:
+
+db.createCollection("test")
+
+db.test.insertMany([
+   {
+       "_id" : 1,
+       "name" : {
+           "first" : "John",
+           "last" : "Backus"
+       },
+       "birth" : ISODate("1924-12-03T05:00:00Z"),
+       "death" : ISODate("2007-03-17T04:00:00Z"),
+       "contribs" : [
+           "Fortran",
+           "ALGOL",
+           "Backus-Naur Form",
+           "FP"
+       ],
+       "awards" : [
+           {
+               "award" : "W.W. McDowell Award",
+               "year" : 1967,
+               "by" : "IEEE Computer Society"
+           },
+           {
+               "award" : "National Medal of Science",
+               "year" : 1975,
+               "by" : "National Science Foundation"
+           },
+           {
+               "award" : "Turing Award",
+               "year" : 1977,
+               "by" : "ACM"
+           },
+           {
+               "award" : "Draper Prize",
+               "year" : 1993,
+               "by" : "National Academy of Engineering"
+           }
+       ]
+   },
+   {
+       "_id" : ObjectId("51df07b094c6acd67e492f41"),
+       "name" : {
+           "first" : "John",
+           "last" : "McCarthy"
+       },
+       "birth" : ISODate("1927-09-04T04:00:00Z"),
+       "death" : ISODate("2011-12-24T05:00:00Z"),
+       "contribs" : [
+           "Lisp",
+           "Artificial Intelligence",
+           "ALGOL"
+       ],
+       "awards" : [
+           {
+               "award" : "Turing Award",
+               "year" : 1971,
+               "by" : "ACM"
+           },
+           {
+               "award" : "Kyoto Prize",
+               "year" : 1988,
+               "by" : "Inamori Foundation"
+           },
+           {
+               "award" : "National Medal of Science",
+               "year" : 1990,
+               "by" : "National Science Foundation"
+           }
+       ]
+   },
+   {
+       "_id" : 3,
+       "name" : {
+           "first" : "Grace",
+           "last" : "Hopper"
+       },
+       "title" : "Rear Admiral",
+       "birth" : ISODate("1906-12-09T05:00:00Z"),
+       "death" : ISODate("1992-01-01T05:00:00Z"),
+       "contribs" : [
+           "UNIVAC",
+           "compiler",
+           "FLOW-MATIC",
+           "COBOL"
+       ],
+       "awards" : [
+           {
+               "award" : "Computer Sciences Man of the Year",
+               "year" : 1969,
+               "by" : "Data Processing Management Association"
+           },
+           {
+               "award" : "Distinguished Fellow",
+               "year" : 1973,
+               "by" : " British Computer Society"
+           },
+           {
+               "award" : "W. W. McDowell Award",
+               "year" : 1976,
+               "by" : "IEEE Computer Society"
+           },
+           {
+               "award" : "National Medal of Technology",
+               "year" : 1991,
+               "by" : "United States"
+           }
+       ]
+   },
+   {
+       "_id" : 4,
+       "name" : {
+           "first" : "Kristen",
+           "last" : "Nygaard"
+       },
+       "birth" : ISODate("1926-08-27T04:00:00Z"),
+       "death" : ISODate("2002-08-10T04:00:00Z"),
+       "contribs" : [
+           "OOP",
+           "Simula"
+       ],
+       "awards" : [
+           {
+               "award" : "Rosing Prize",
+               "year" : 1999,
+               "by" : "Norwegian Data Association"
+           },
+           {
+               "award" : "Turing Award",
+               "year" : 2001,
+               "by" : "ACM"
+           },
+           {
+               "award" : "IEEE John von Neumann Medal",
+               "year" : 2001,
+               "by" : "IEEE"
+           }
+       ]
+   },
+   {
+       "_id" : 5,
+       "name" : {
+           "first" : "Ole-Johan",
+           "last" : "Dahl"
+       },
+       "birth" : ISODate("1931-10-12T04:00:00Z"),
+       "death" : ISODate("2002-06-29T04:00:00Z"),
+       "contribs" : [
+           "OOP",
+           "Simula"
+       ],
+       "awards" : [
+           {
+               "award" : "Rosing Prize",
+               "year" : 1999,
+               "by" : "Norwegian Data Association"
+           },
+           {
+               "award" : "Turing Award",
+               "year" : 2001,
+               "by" : "ACM"
+           },
+           {
+               "award" : "IEEE John von Neumann Medal",
+               "year" : 2001,
+               "by" : "IEEE"
+           }
+       ]
+   },
+   {
+       "_id" : 6,
+       "name" : {
+           "first" : "Guido",
+           "last" : "van Rossum"
+       },
+       "birth" : ISODate("1956-01-31T05:00:00Z"),
+       "contribs" : [
+           "Python"
+       ],
+       "awards" : [
+           {
+               "award" : "Award for the Advancement of Free Software",
+               "year" : 2001,
+               "by" : "Free Software Foundation"
+           },
+           {
+               "award" : "NLUUG Award",
+               "year" : 2003,
+               "by" : "NLUUG"
+           }
+       ]
+   },
+   {
+       "_id" : ObjectId("51e062189c6ae665454e301d"),
+       "name" : {
+           "first" : "Dennis",
+           "last" : "Ritchie"
+       },
+       "birth" : ISODate("1941-09-09T04:00:00Z"),
+       "death" : ISODate("2011-10-12T04:00:00Z"),
+       "contribs" : [
+           "UNIX",
+           "C"
+       ],
+       "awards" : [
+           {
+               "award" : "Turing Award",
+               "year" : 1983,
+               "by" : "ACM"
+           },
+           {
+               "award" : "National Medal of Technology",
+               "year" : 1998,
+               "by" : "United States"
+           },
+           {
+               "award" : "Japan Prize",
+               "year" : 2011,
+               "by" : "The Japan Prize Foundation"
+           }
+       ]
+   },
+   {
+       "_id" : 8,
+       "name" : {
+           "first" : "Yukihiro",
+           "aka" : "Matz",
+           "last" : "Matsumoto"
+       },
+       "birth" : ISODate("1965-04-14T04:00:00Z"),
+       "contribs" : [
+           "Ruby"
+       ],
+       "awards" : [
+           {
+               "award" : "Award for the Advancement of Free Software",
+               "year" : "2011",
+               "by" : "Free Software Foundation"
+           }
+       ]
+   },
+   {
+       "_id" : 9,
+       "name" : {
+           "first" : "James",
+           "last" : "Gosling"
+       },
+       "birth" : ISODate("1955-05-19T04:00:00Z"),
+       "contribs" : [
+           "Java"
+       ],
+       "awards" : [
+           {
+               "award" : "The Economist Innovation Award",
+               "year" : 2002,
+               "by" : "The Economist"
+           },
+           {
+               "award" : "Officer of the Order of Canada",
+               "year" : 2007,
+               "by" : "Canada"
+           }
+       ]
+   },
+   {
+       "_id" : 10,
+       "name" : {
+           "first" : "Martin",
+           "last" : "Odersky"
+       },
+       "contribs" : [
+           "Scala"
+       ]
+   }
+
+] )
+
+
+2) Report all documents of people who got less than 3 awards or have contribution in “FP”
+
+db.test.find({$or: [{"awards.2":{$exists: false}},{contribs: "FP"}]}).pretty()
+
+
+4) Insert a new filed of type array, called “comments”, into the document of “Alex Chen” storing the following comments: “He taught in 3 universities”, “died from cancer”, “lived in CA”
+
+db.test.update({name:{first:"Alex",last:"Chen"}},{$set:{comments:["He taught in 3 universities","died from cancer","lived in CA"]}})
+
+
+6) Report the distinct organization that gave awards. This information can be found in the “by” field inside the “awards” array. The output should be an array of the distinct values, e.g., [“wpi’, “acm’, ...]
+
+var my_ans=new Array()
+db.test.find({"awards":{$exists:true}}).forEach(function(i){i.awards.forEach(function(j){if(my_ans.includes(j.by)==false){my_ans.push(j.by)}})})
+
+
+8) Report only the names (first and last) of those individuals who won at least two awards in 2001.
+
+var my_ans1=new Array()
+db.test.find({"awards.1":{$exists: true}}).forEach(function(i){var my_count=0;i.awards.forEach(function(j){if(j.year=="2001"){my_count+=1;}}); if(my_count>=2){my_ans1.push(i.name)}})
+
+
+10) Report only one document where one of the awards is given by “ACM”.
+
+db.test.findOne({"awards.by":"ACM"})
+
+
+Question2:
+
+1) Write an aggregation query that group by the award name, i.e., the “award” field inside the “awards” array and reports the count of each award.
+
+db.test.mapReduce(
+  function(){if(this.awards)
+  {
+    for(var idx=0;idx<this.awards.length;idx++)
+    {
+      var key=this.awards[idx].award;
+      var value={count:1};
+      emit(key,value);
+    }
+  }},
+  function(award_name,value){
+  ans={award_group: award_name, count: 0};
+
+  for(var idx=0;idx<value.length;idx++)
+  {
+    ans.count+=value[idx].count;
+  }
+
+  return ans;
+  },
+  {out: "ans"}
+)
+//to see the result(my mongodb version is the newest therefore can't use .mapReduce.find())
+db.ans.find().pretty()
+
+
+Question3:
+
+1) Assume we model the records and relationships in Figure 1 using the Parent-Referencing model (Slide 4 in MongoDB-3). Write a query to report the ancestors of “MongoDB”. The output should be an array containing values [{Name: “Databases”, Level: 1},
+{Name: “Programming”, Level: 2}, {Name: “Books”, Level: 3}]
+* Note: “Level” is the distance from “MongoDB” node to the other node. It should be computed in your code
+
+
+var ancestors=[];
+var stack=[];
+var item=db.parent.findOne({_id:"MongoDB"});
+stack.push(item);
+var count=0;
+
+while(stack.length>0){
+  var cur=stack.pop();
+  if(cur.parent==null){
+    break;
+  }
+  var par=db.parent.findOne({_id:cur.parent});
+  stack.push(par);
+
+  count+=1;
+  ancestors.push({name: cur.parent,Level: count});
+}
+
+ancestors
+
+
+3) Assume we model the records and relationships in Figure 1 using the Child-Referencing model (Slide 9 in MongoDB-3). Write a query to report the parent of “dbm”.
+
+db.child.find({children:"dbm"}).toArray().map(function(ele){return ele._id})
+
+
+
+
