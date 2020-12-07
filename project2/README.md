@@ -21,5 +21,18 @@ The Java program should accept the HDFS file location containing the initial K c
 # Problem 4 (Distance-Based Outlier Detection Clustering)
 Outliers are objects in the data that do not conform to the common behavior of the other objects. There are many definitions for outliers. One common definition is “distance-based outliers”. In this definition (see the figure below), you are given two parameters, radius r and threshold k, and a point p is said to be outlier iff: “Within a circle around p (p is the center) of radius r, less than k neighbors are found”. And point p is said to be inlier (Not outlier) iff: “Within a circle around p (p is the center) of radius r, more than or equal to k neighbors are found”
 
-[![p4_pic](<https://user-images.githubusercontent.com/63271980/101361277-c3f26c00-386c-11eb-91ab-5821382b4eff.png>
-)]
+![p4_pic](<https://user-images.githubusercontent.com/63271980/101361277-c3f26c00-386c-11eb-91ab-5821382b4eff.png>
+)
+
+## Dataset
+./p4/input/test_p4.csv
+
+## Reporting Outliers
+you need to write a java map-reduce job that reports the outliers based on the following requirements:
+(1) The program takes two mandatory parameters r and k. If either is missing, then report an error.
+(2) You must use a single map-reduce job (many mappers and many reducers but in a single job) to
+complete the task.
+Hint: Think of diving the space in small segments. Try to make the processing of each segment independent from any other segment. That is, for a specific point p, you should be able to decide whether it is outlier or not only based on the points in p’s segment.
+
+## Reference
+[DOD paper](http://people.csail.mit.edu/lcao/papers/DOD.pdf)
